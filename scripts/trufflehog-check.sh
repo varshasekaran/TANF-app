@@ -29,7 +29,7 @@ python ./trufflehog-check/lib/python$pythonVersion/site-packages/truffleHog/truf
   --regex \
   --entropy=True \
   --branch "$CIRCLE_BRANCH" \
-  --since_commit "$last_merge" \
+  -s "$last_merge" \
   --exclude_paths ./trufflehog-exclude-patterns.txt \
   --rules ./regexes.json \
   file:///root/project
